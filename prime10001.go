@@ -1,9 +1,11 @@
 package main
 
-import "math"
+import (
+	"fmt"
+)
 
 func isPrime(value int) bool {
-	for i := 2; i <= int(math.Floor(float64(value)/2)); i++ {
+	for i := 2; i <= value/2; i++ {
 		if value%i == 0 {
 			return false
 		}
@@ -24,5 +26,5 @@ func prime(x int) int {
 }
 
 func main() {
-	prime(6)
+	fmt.Print(prime(10001))
 }
